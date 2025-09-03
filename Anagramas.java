@@ -1,4 +1,5 @@
 package TP02;
+import java.nio.charset.StandardCharsets;
 import java.util.*;
 
 public class Anagramas {
@@ -34,7 +35,7 @@ public class Anagramas {
         }
     }
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in, StandardCharsets.UTF_8);
         String string;
         while(!(string = sc.nextLine()).equals("FIM")){
             System.out.println(VerificaAnagrama(string) ? "SIM" : "NÃO");
