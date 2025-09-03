@@ -1,5 +1,4 @@
 package TP02;
-
 import java.util.*;
 
 public class AlgebraBooleana {
@@ -132,9 +131,10 @@ public class AlgebraBooleana {
         Scanner sc = new Scanner(System.in);
         String entrada;
 
-        while (!(entrada = sc.nextLine()).equals("FIM")) {
+        // Verificar se há linha disponível antes de ler
+        while (sc.hasNextLine() && !(entrada = sc.nextLine()).equals("0")) {
             boolean resultado = avaliarExpressao(entrada);
-            System.out.println(resultado ? "1" : "2");
+            System.out.println(resultado ? "1" : "0");
         }
 
         sc.close();
